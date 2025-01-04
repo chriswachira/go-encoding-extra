@@ -1,0 +1,17 @@
+name: Run tests
+run-name: ${{ github.actor }} triggered a code test.
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+jobs:
+  go-test:
+    name: "Run Golang unit tests"
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-go@v5
+      with:
+        go-version: '^1.23.0' # The Go version to download (if necessary) and use.
+    - run: go test -cover
