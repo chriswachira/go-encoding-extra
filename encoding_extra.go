@@ -48,19 +48,3 @@ func (b *BaseExtraEncoding) Decode(encodedStr string) int {
 
 	return decodedInt
 }
-
-// func main() {
-// 	newBase58BitcoinEncoder := BaseExtraEncoding{
-// 		EncodingCharacters: Base58EncodingTypeBitcoin,
-// 	}
-
-// 	fmt.Printf("\nBitcoin base58 encoder -> %v", newBase58BitcoinEncoder.Encode(123456789))
-// 	fmt.Printf("\nBitcoin base58 decoded -> %v", newBase58BitcoinEncoder.Decode("BukQL"))
-
-// 	newBase58FlickrEncoder := BaseExtraEncoding{
-// 		EncodingCharacters: Base58EncodingTypeFlickr,
-// 	}
-
-// 	fmt.Printf("\nFlickr base58 -> %v", newBase58FlickrEncoder.Encode(123456789))
-// 	fmt.Printf("\nFlickr base58 decoded -> %v", newBase58FlickrEncoder.Decode("bUKpk"))
-// }
